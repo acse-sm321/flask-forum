@@ -1,87 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Online Forum-Register</title>
-
-  <!-- Bootstrap -->
-  <link href="./assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-  <!--[if lt IE 9]>
-      <script src="./assets/plugins/html5shiv.min.js"></script>
-      <script src="./assets/plugins/respond.min.js"></script>
-    <![endif]-->
-
-  <link rel="stylesheet" href="./assets/style/common.css">
-  <link rel="stylesheet" href="./assets/style/login.css">
-  <link rel="stylesheet" href="//at.alicdn.com/t/font_1658093_nokjvsp8hws.css">
-</head>
-
-<body class="layout">
-  <div class="container">
+{% extends 'base.html' %}
+{% from 'macro/form_errors.html' import form_field_errors %}
+{% block title %}{{ super() }} - Register{% endblock %}
+{% block header %}
+    <link rel="stylesheet" href="./assets/style/login.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1658093_nokjvsp8hws.css">
+{% endblock %}
+{% blocklayout% %}
+<div class="container">
     <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <!-- Message area -->
-        <div class="alert alert-warning alert-dismissible fade in" role="alert">
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
-            aria-hidden="true">×</span></button>
-        <span>Login failed，please try again</span>
+        <div class="col-md-6 col-md-offset-3">
+            <!-- Message area -->
+            {% include 'components/flash_messages.html' %}
+            <div class="login-header">
+                <h2 class="title text-center">Online Forum-Register</h2>
+                <div class="slogan text-center">Ask and Learn</div>
+            </div>
+            <form class="login-form box-wrap" method="POST" action="{{ url_for('accounts.register') }}">
+                {{ form.csrf_token }}
+                <div class="form-group">
+                    <label for="id-user-name">Username</label>
+                    {{ form.username }}
+                </div>
+                {{ from_field_errors(form.username.errors) }}
+                <div class="form-group">
+                    <label for="id-nick-name">Nickname</label>
+                    {{ form.nickname }}
+                </div>
+                {{ from_field_errors(form.nickname.errors) }}
+                <div class="form-group">
+                    <label for="id-password">Password</label>
+                    {{ form.password }}
+                </div>
+                {{ from_field_errors(form.password.errors) }}
+                <div class="form-group">
+                    <label for="id-confirm-password">Confirm Password</label>
+                    {{ form.confirm_password }}
+                </div>
+                {{ form_field_errors(form.confirm_password.errors) }}
+                <div class="form-group">
+                    <button type="submit" class="btn btn-info btn-block btn-lg">Register</button>
+                </div>
+                <p class="desc">Login with mobile<br/>
+                    Agree with《User Agreement》</p>
+                <p class="text-right">registered，<a href="{{ url_for('accounts.login') }}">click to login</a></p>
+            </form>
+            <!-- Login with social media -->
+            <div class="login-social box-wrap">
+                <span>Login with social media</span>
+                <div class="right">
+                    <span><i class="iconfont icon-wechat"></i>Wechat</span>
+                    <span><i class="iconfont icon-qq"></i>QQ</span>
+                    <span><i class="iconfont icon-weibo"></i>Weibo</span>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="login-footer">
+                <a href="">About</a>
+                <a href="">Contact us</a>
+                <a href="">Qualifications</a>
+                <a href="">Column</a>
+                <br>
+                <a href="">ICP 0000000001</a>
+            </div>
         </div>
-        <div class="login-header">
-          <h2 class="title text-center">Online Forum-Register</h2>
-          <div class="slogan text-center">Ask and Learn</div>
-        </div>
-        <form class="login-form box-wrap" method="GET" action="../../qa/templates/index.html">
-          <div class="form-group">
-            <label for="id-user-name">Username</label>
-            <input type="email" class="form-control input-lg" id="id-user-name" placeholder="用户名">
-          </div>
-          <div class="form-group">
-            <label for="id-nick-name">Nickname</label>
-            <input type="text" class="form-control input-lg" id="id-nick-name" placeholder="昵称">
-          </div>
-          <div class="form-group">
-            <label for="id-password">Password</label>
-            <input type="password" class="form-control input-lg" id="id-password" placeholder="请输入密码">
-          </div>
-          <div class="form-group">
-            <label for="id-confirm-password">Confirm Password</label>
-            <input type="password" class="form-control input-lg" id="id-confirm-password" placeholder="请重复密码">
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-info btn-block btn-lg">Register</button>
-          </div>
-          <p class="desc">Login with mobile<br />
-            Agree with《User Agreement》</p>
-          <p class="text-right">registered，<a href="login.html">click to login</a></p>
-        </form>
-        <!-- Login with social media -->
-        <div class="login-social box-wrap">
-          <span>Login with social media</span>
-          <div class="right">
-            <span><i class="iconfont icon-wechat"></i>Wechat</span>
-            <span><i class="iconfont icon-qq"></i>QQ</span>
-            <span><i class="iconfont icon-weibo"></i>Weibo</span>
-          </div>
-        </div>
-        <!-- footer -->
-        <div class="login-footer">
-          <a href="">About</a>
-          <a href="">Contact us</a>
-          <a href="">Qualifications</a>
-          <a href="">Column</a>
-          <br>
-          <a href="">ICP 0000000001</a>
-        </div>
-      </div>
     </div>
-  </div>
-
-  <script src="./assets/plugins/jquery-3.4.1.min.js"></script>
-  <script src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+</div>
+{% endblock %}
