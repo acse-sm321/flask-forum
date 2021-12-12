@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <!-- Bootstrap -->
+  <link href="./assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+      <script src="./assets/plugins/html5shiv.min.js"></script>
+      <script src="./assets/plugins/respond.min.js"></script>
+    <![endif]-->
+
+  <link rel="stylesheet" href="./assets/style/common.css">
+  <link rel="stylesheet" href="./assets/style/mine.css">
+</head>
+
+<body class="layout">
+  <!-- Top navigator -->
+  <div class="layout-header">
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#id-index-banner"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="./index.html">OnlineForum</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="id-index-banner">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Topics</a></li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="搜索话题">
+            </div>
+            <button type="submit" class="btn btn-default">Search</button>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Ask a question</a></li>
+            <li><a href="#">Message<span class="badge">4</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                aria-expanded="false">Personal Space <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">My Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Exit</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+  <!-- // top navigator -->
+  <!-- personal information on top -->
+  <div class="layout-personal">
+    <div class="container">
+      <div class="main-top">
+        <img src="./assets/home/qa/personal_top.jpg" alt="">
+      </div>
+      <div class="main-bottom">
+        <div class="content-left">
+          <img src="./assets/home/qa/personal_avatar.jpg" alt="">
+        </div>
+        <div class="content-right">
+          <h3>NavCat</h3>
+          <div class="desc">
+            I like wanking.
+          </div>
+          <div class="info-row">
+            <i class="glyphicon glyphicon-folder-close"></i> <span>Computer Science</span>
+          </div>
+          <div class="info-row">
+            <i class="glyphicon glyphicon-certificate"></i> <span>Prefer not to say</span>
+          </div>
+          <button class="btn btn-default btn-gray" type="button">Edit Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // personal information on top -->
+  <div class="container layout-main">
+    <div class="row">
+      <div class="col-md-9">
+        <!-- left area -->
+        <div class="main-left">
+          <ul class="nav nav-tabs">
+            <li role="presentation"><a href="#">Moments</a></li>
+            <li role="presentation"><a href="#">Answers</a></li>
+            <li role="presentation" ><a href="#">Collections</a></li>
+            <li role="presentation" class="active"><a href="#">Following</a></li>
+            <li role="presentation"><a href="#">Articles</a></li>
+          </ul>
+          <div class="title">My favorite questions</div>
+          <!-- list of followed questions -->
+          <ul class="flllow-qa-ls">
+            <li>
+              <a href="../../qa/templates/detail.html">疫情结束后会爆发消费狂潮吗？</a>
+              <div class="stats">2021-9-1 · 15 answers ·  20 followers</div>
+            </li>
+            <li>
+              <a href="../../qa/templates/detail.html">钟南山说「我们也做了疫情预测模型，投稿到国外权威期刊被退了回来」，你怎么看？</a>
+              <div class="stats">2021-9-1 · 15 answers ·  20 followers</div>
+            </li>
+            <li>
+              <a href="../../qa/templates/detail.html">疫情结束后会爆发消费狂潮吗？</a>
+              <div class="stats">2021-9-1 · 15 answers ·  20 followers</div>
+            </li>
+            <li>
+              <a href="../../qa/templates/detail.html">钟南山说「我们也做了疫情预测模型，投稿到国外权威期刊被退了回来」，你怎么看？</a>
+              <div class="stats">2021-9-1 · 15 answers ·  20 followers</div>
+            </li>
+            <li>
+              <a href="../../qa/templates/detail.html">疫情结束后会爆发消费狂潮吗？</a>
+              <div class="stats">2021-9-1 · 15 answers ·  20 followers</div>
+            </li>
+            <li>
+              <a href="../../qa/templates/detail.html">钟南山说「我们也做了疫情预测模型，投稿到国外权威期刊被退了回来」，你怎么看？</a>
+              <div class="stats">2021-9-1 · 15 answers ·  20 followers</div>
+            </li>
+          </ul>
+
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li>
+                <a href="#" aria-label="previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">4</a></li>
+              <li><a href="#">5</a></li>
+              <li>
+                <a href="#" aria-label="next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- //left area -->
+      </div>
+      <div class="col-md-3">
+        <!-- right area -->
+        <div class="main-right">
+          <div class="follow-stats box-wrap">
+            <div>
+              <span>Following</span>
+              <strong>12</strong>
+            </div>
+            <div>
+              <span>Followers</span>
+              <strong>12</strong>
+            </div>
+          </div>
+          <!-- right footer -->
+          <div class="right-footer">
+            <a href="#">User's Guide</a><span class="dot">·</span>
+            <a href="#">User agreement</a><span class="dot">·</span>
+            <a href="#">User privacy policy</a>
+            <br/>
+            <a href="#">Infringement report</a><span class="dot">·</span>
+            <a href="#">Online harmful information reporting area</a>
+            <br/>
+            <a href="#">ICP 00000001</a>
+            <br/>
+            <a href="#">ICP 00000001</a>
+            <br/>
+            <a href="#">Contact us &copy; 2021 Online Forum</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/plugins/jquery-3.4.1.min.js"></script>
+  <script src="./assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>
