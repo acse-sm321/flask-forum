@@ -39,11 +39,11 @@ For the ORM design, I used the tool called [pdman](http://www.pdman.cn/#/).  The
 
 **Accounts Management:**
 
-![Accounts](C:\Users\asus\Desktop\forum\docs\accounts_db.jpg)
+![Accounts](docs\accounts_db.jpg)
 
 **Forum functions:**
 
-![Forum](C:\Users\asus\Desktop\forum\docs\qa_db.jpg)
+![Forum](docs\qa_db.jpg)
 
 
 
