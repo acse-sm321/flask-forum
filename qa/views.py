@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request, abort
+from flask_login import login_required
 
 from models import Question
 
@@ -24,6 +25,7 @@ def follow():
 
 
 @qa.route('/write')
+@login_required
 def write():
     """ write a post/article """
     return render_template('write.html')
